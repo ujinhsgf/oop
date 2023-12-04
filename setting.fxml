@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="700.0" prefWidth="920.0" styleClass="first-layer-color" stylesheets="@../Style/daymode.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.Controller.SettingController">
+   <children>
+      <AnchorPane fx:id="sky" layoutX="108.0" layoutY="121.0" prefHeight="400.0" prefWidth="230.0" styleClass="theme-background-color" AnchorPane.leftAnchor="108.0" AnchorPane.topAnchor="108.0" />
+      <ImageView fx:id="star" fitHeight="80.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="150.0" AnchorPane.topAnchor="440.0">
+         <image>
+            <Image url="@../PNG/star.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="sun" fitHeight="80.0" fitWidth="82.0" layoutX="104.8" layoutY="430.4" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="105.0" AnchorPane.topAnchor="435.0">
+         <image>
+            <Image url="@../PNG/sun.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="58.0" fitWidth="237.0" layoutX="104.8" pickOnBounds="true" AnchorPane.leftAnchor="105.0" AnchorPane.topAnchor="470.0">
+         <image>
+            <Image url="@../PNG/sand_dunes.png" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="303.0" layoutY="438.0" prefHeight="70.0" prefWidth="243.0" AnchorPane.leftAnchor="302.0">
+         <styleClass>
+            <String fx:value="first-layer-color" />
+            <String fx:value="support-theme-button-right-shape" />
+         </styleClass>
+      </AnchorPane>
+      <AnchorPane prefHeight="438.0" prefWidth="920.0" styleClass="first-layer-color" />
+      <AnchorPane layoutY="508.0" prefHeight="194.0" prefWidth="920.0" styleClass="first-layer-color" />
+      <AnchorPane layoutX="-101.0" layoutY="438.0" prefHeight="70.0" prefWidth="243.0" AnchorPane.leftAnchor="-99.0">
+         <styleClass>
+            <String fx:value="first-layer-color" />
+            <String fx:value="support-theme-button-left-shape" />
+         </styleClass>
+      </AnchorPane>
+      <AnchorPane layoutX="108.0" layoutY="438.0" onMouseClicked="#changeTheme" prefHeight="70.0" prefWidth="230.0" style="-fx-border-color: #000000; -fx-border-width: 2;" styleClass="circle" AnchorPane.leftAnchor="108.0">
+         <children>
+            <AnchorPane fx:id="dayButton" layoutX="14.0" layoutY="8.0" onMouseClicked="#changeTheme" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: #eaeef4;" styleClass="circle" AnchorPane.leftAnchor="3.0" AnchorPane.topAnchor="2.5">
+               <children>
+                  <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="7.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="7.0" AnchorPane.topAnchor="5.0">
+                     <image>
+                        <Image url="@../PNG/cloudy.png" />
+                     </image>
+                  </ImageView>
+                  <AnchorPane fx:id="nightButton" layoutX="3.0" layoutY="-4.0" onMouseClicked="#changeTheme" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: #060644;" styleClass="circle" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <ImageView fitHeight="50.0" fitWidth="48.0" layoutX="13.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0">
+                           <image>
+                              <Image url="@../PNG/moon.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <Line endX="-23.5999755859375" endY="646.0" layoutX="456.0" layoutY="35.00000190734863" startX="-23.5999755859375" startY="-14.000001907348633" strokeWidth="2.0" AnchorPane.bottomAnchor="20.399999999999977" AnchorPane.topAnchor="20.0" />
+      <ImageView fitHeight="88.0" fitWidth="89.0" layoutX="509.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../PNG/editInfoIcon.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="612.0" layoutY="70.0" prefHeight="54.0" prefWidth="250.0" text="Edit Infomation">
+         <font>
+            <Font name="Dubai Bold" size="34.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="553.0" layoutY="168.0" prefHeight="50.0" prefWidth="280.0" styleClass="name-pass-field" AnchorPane.topAnchor="170.0">
+         <children>
+            <ImageView fitHeight="35.0" fitWidth="40.0" layoutX="8.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="8.0" AnchorPane.topAnchor="5.0">
+               <image>
+                  <Image url="@../PNG/user.png" />
+               </image>
+            </ImageView>
+            <Line endX="-100.0" endY="35.0" layoutX="155.0" layoutY="10.0" startX="-100.0" strokeWidth="2.0" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="3.0" />
+            <TextField fx:id="currentUserName" layoutX="62.0" layoutY="5.0" prefHeight="35.0" prefWidth="215.0" promptText="Current User Name" styleClass="text-field-background" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+               <font>
+                  <Font name="Dubai Regular" size="14.0" />
+               </font>
+            </TextField>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="553.0" layoutY="239.0" prefHeight="50.0" prefWidth="280.0" styleClass="name-pass-field" AnchorPane.topAnchor="240.0">
+         <children>
+            <ImageView fitHeight="35.0" fitWidth="40.0" layoutX="7.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="8.0" AnchorPane.topAnchor="5.0">
+               <image>
+                  <Image url="@../PNG/user.png" />
+               </image>
+            </ImageView>
+            <Line endX="-100.0" endY="35.0" layoutX="156.0" layoutY="8.0" startX="-100.0" strokeWidth="2.0" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="3.0" />
+            <TextField fx:id="newUserName" layoutX="88.0" layoutY="4.0" prefHeight="35.0" prefWidth="215.0" promptText="New User Name" styleClass="text-field-background" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+               <font>
+                  <Font name="Dubai Regular" size="14.0" />
+               </font>
+            </TextField>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="553.0" layoutY="311.0" prefHeight="50.0" prefWidth="280.0" styleClass="name-pass-field" AnchorPane.topAnchor="310.0">
+         <children>
+            <ImageView fitHeight="35.0" fitWidth="40.0" layoutX="3.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="8.0" AnchorPane.topAnchor="5.0">
+               <image>
+                  <Image url="@../PNG/padlock.png" />
+               </image>
+            </ImageView>
+            <Line endX="-100.0" endY="35.0" layoutX="158.0" layoutY="9.0" startX="-100.0" strokeWidth="2.0" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="3.0" />
+            <TextField fx:id="currentPassword" layoutX="67.0" layoutY="7.0" prefHeight="35.0" prefWidth="215.0" promptText="Current Password" styleClass="text-field-background" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+               <font>
+                  <Font name="Dubai Regular" size="14.0" />
+               </font>
+            </TextField>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="553.0" layoutY="390.0" prefHeight="50.0" prefWidth="280.0" styleClass="name-pass-field" AnchorPane.topAnchor="380.0">
+         <children>
+            <ImageView fitHeight="35.0" fitWidth="40.0" layoutX="17.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="8.0" AnchorPane.topAnchor="5.0">
+               <image>
+                  <Image url="@../PNG/padlock.png" />
+               </image>
+            </ImageView>
+            <Line endX="-100.0" endY="35.0" layoutX="162.0" layoutY="3.0" startX="-100.0" strokeWidth="2.0" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="3.0" />
+            <TextField fx:id="newPassword" layoutX="78.0" layoutY="7.0" prefHeight="35.0" prefWidth="215.0" promptText="New Password" styleClass="text-field-background" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+               <font>
+                  <Font name="Dubai Regular" size="14.0" />
+               </font>
+            </TextField>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="553.0" layoutY="462.0" prefHeight="50.0" prefWidth="280.0" styleClass="name-pass-field" AnchorPane.topAnchor="450.0">
+         <children>
+            <ImageView fitHeight="35.0" fitWidth="40.0" layoutX="-4.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="8.0" AnchorPane.topAnchor="5.0">
+               <image>
+                  <Image url="@../PNG/padlock.png" />
+               </image>
+            </ImageView>
+            <Line endX="-100.0" endY="35.0" layoutX="162.0" layoutY="10.0" startX="-100.0" strokeWidth="2.0" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="3.0" />
+            <TextField fx:id="confirmNewPassword" layoutX="88.0" prefHeight="35.0" prefWidth="215.0" promptText="Confirm New Password" styleClass="text-field-background" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+               <font>
+                  <Font name="Dubai Regular" size="14.0" />
+               </font>
+            </TextField>
+         </children>
+      </AnchorPane>
+      <JFXButton fx:id="savebutton" contentDisplay="TEXT_ONLY" layoutX="598.0" layoutY="541.0" onAction="#saveNotification" prefHeight="60.0" prefWidth="190.0" styleClass="log-in-button" text="Save">
+         <font>
+            <Font name="Dubai Bold" size="25.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="94.0" layoutY="549.0" prefHeight="80.0" prefWidth="259.0" text="This will reset all setting ( Include dictionary )" textAlignment="CENTER" wrapText="true">
+         <graphic>
+            <ImageView fitHeight="62.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../PNG/reset.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="Dubai Bold" size="16.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
